@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Press+Start+2P&display=swap');
+
+@layer components {
+	body {
+		@apply font-open-sans;
+	}
+
+    .container-wrapper {
+        @apply w-full px-6 mx-auto max-w-screen-2xl;
+    }
+
+    .text-smaller {
+        @apply text-xs md:text-sm;
+    }
+
+    .text-small {
+        @apply text-sm md:text-base;
+    }
+
+    .text-medium {
+        @apply text-base md:text-lg;
+    }
+
+    .text-big {
+        @apply text-lg md:text-xl lg:text-2xl;
+    }
+
+    .title {
+        @apply font-press-start;
+    }
+    
+    .title-small {
+        @apply text-base sm:text-lg md:text-xl;
+    }
+
+    .title-medium {
+        @apply text-lg sm:text-xl md:text-2xl;
+    }
+
+    .title-big {
+        @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl [text-shadow:0_2px_0_#aff12d] md:[text-shadow:0_3px_0_#aff12d] lg:[text-shadow:0_4px_0_#aff12d];
+    }
+
+    .title-bigger {
+        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl [text-shadow:0_3px_0_#aff12d] md:[text-shadow:0_4px_0_#aff12d] lg:[text-shadow:0_5px_0_#aff12d];
+    }
+
+    .green-button {
+        @apply px-6 md:px-8 py-3 md:py-4 font-bold rounded-md bg-green-light text-purple-dark hover:translate-y-[5px] transition-all duration-300 shadow-[0_3px_0] md:shadow-[0_5px_0] shadow-green-dark md:shadow-green-dark hover:shadow-[0_0_0] relative z-1 inline-block;
+    }
+
+    .green-button-big {
+        @apply px-8 md:px-14 py-4 md:py-5 font-bold rounded-md bg-green-light text-purple-dark hover:translate-y-[5px] transition-all duration-300 shadow-[0_3px_0] md:shadow-[0_5px_0] shadow-green-dark md:shadow-green-dark hover:shadow-[0_0_0] relative z-1 inline-block;
+    }
+
+    .gradient-top {
+        background: rgb(25,6,58);
+        background: -moz-linear-gradient(180deg, rgba(25,6,58,1) 0%, rgba(25,6,58,0) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(25,6,58,1) 0%, rgba(25,6,58,0) 100%);
+        background: linear-gradient(180deg, rgba(25,6,58,1) 0%, rgba(25,6,58,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#19063a",endColorstr="#19063a",GradientType=1);
+    }
+
+    .gradient-bottom {
+        background: rgb(11,2,26);
+        background: -moz-linear-gradient(0deg, rgba(11,2,26,1) 0%, rgba(11,2,26,0) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(11,2,26,1) 0%, rgba(11,2,26,0) 100%);
+        background: linear-gradient(0deg, rgba(11,2,26,1) 0%, rgba(11,2,26,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b021a",endColorstr="#0b021a",GradientType=1);
+    }
+
+    body.menu-open {
+        @apply overflow-hidden;
+    }
+
+    body.menu-open #fs-menu {
+        @apply pointer-events-auto;
+    }
+
+    body.menu-open #fs-menu .bg {
+        @apply bg-[rgba(0,0,0,.7)];
+    }
+
+    body.menu-open #fs-menu .wrap {
+        @apply transform-none;
+    }
+
+    #floating-card.active {
+        @apply transform-none;
+    }
+
+    #rarity .rs-container {
+        @apply w-full h-auto;
+    }
+
+    #rarity .rs-container .rs-bg {
+        @apply relative block w-full h-6 overflow-hidden border-2 border-black border-solid rounded-lg z-1 bg-purple-light before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-white before:content-[''] before:z-5 before:opacity-30 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:content-[''] after:bg-black after:opacity-30 top-auto left-auto;
+    }
+
+    #rarity .rs-container .rs-selected {
+        @apply top-0 left-0 h-full z-2 bg-green-light overflow-hidden border-2 border-black border-solid rounded-lg before:absolute before:top-0 before:left-0 before:w-full before:h-1 before:bg-white before:content-[''] before:z-5 before:opacity-30 after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:content-[''] after:bg-black after:opacity-30;
+    }
+
+    #rarity .rs-container .rs-scale {
+        @apply hidden;
+    }
+
+    #rarity .rs-container .rs-pointer {
+        @apply z-3 bg-[url('../img/icons/star.png')] bg-contain bg-center bg-no-repeat bg-transparent border-none shadow-none w-12 h-12 rounded-none before:content-[none] after:content-[none] -translate-y-4;
+    }
+
+    #rarity .rs-container .rs-pointer .rs-tooltip {
+        @apply h-auto px-2 py-1 text-sm font-bold -translate-x-1/2 -translate-y-8 bg-white border-2 border-black border-solid rounded-md pointer-events-none md:px-3 md:text-base w-max left-5;
+    }
+
+    .team-photo-slider .link.active .image {
+        animation: boxGlow 1s infinite linear;
+    }
+
+    .team-photo-slider .link.active .title {
+        opacity: 1;
+        transform: none;
+    }
+
+    #faq .items .item.active {
+        @apply bg-[rgba(255,255,255,0.2)] border-white;
+    }
+
+    #faq .items .item.active .arrow {
+        @apply -rotate-90;
+    }
+
+    .pixel-border {
+        box-shadow:
+        0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
+        0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
+        0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -2) var(--pixel-bg),
+        0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -2) var(--pixel-bg),
+        0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -4) var(--pixel-bg),
+        0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -4) var(--pixel-bg),
+        0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -6) var(--pixel-bg),
+        0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -6) var(--pixel-bg),
+        calc(var(--pixel) * -1) 0 0 0 var(--pixel-border),
+        var(--pixel) 0 0 0 var(--pixel-border),
+        0 calc(var(--pixel) * -2) 0 0 var(--pixel-border),
+        0 calc(var(--pixel) * 2) 0 0 var(--pixel-border),
+        0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+        0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+        0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+        0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+        0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+        0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+        0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+        0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+        calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2),
+        calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2),
+        0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2), 
+        0 var(--pixel) 0 var(--pixel) var(--pixel-border-2),
+        0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2),
+        0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2),
+        0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+        0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+        0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+        0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+        0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+        0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+        0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+        0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+        calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3),
+        calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3),
+        0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3),
+        0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3),
+        0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3),
+        0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3),
+        0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3),
+        0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+        0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+        0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 
+        0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3),
+        0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 
+        0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3),
+        0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3), 
+        0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3);
+    }
+
+}
+
+/* global imports */
+/* @import 'breakpoints.css'; */
+@import 'reset.css';
+@import 'variables.css';
+@import 'custom-scrollbar.css';
+@import 'animations.css';

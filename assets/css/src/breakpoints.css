@@ -1,0 +1,21 @@
+body:before {
+    content: 'xs';
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    background: black;
+    z-index: 99999999999;
+    opacity: .3;
+    font-family: sans-serif;
+}
+
+@media only screen and (min-width: 640px) { body:before { content: 'sm'; }}
+@media only screen and (min-width: 768px) { body:before { content: 'md'; }}
+@media only screen and (min-width: 1024px) { body:before { content: 'lg'; }}
+@media only screen and (min-width: 1280px) { body:before { content: 'xl'; }}
+@media only screen and (min-width: 1536px) { body:before { content: '2xl'; }}
