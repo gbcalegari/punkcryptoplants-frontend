@@ -46,22 +46,23 @@ var rangeSlider = new rSlider({
             setTimeout(function(){
                 $('.rarity-rare-slider').fadeIn();
             }, 300)
-        } else if (vals == 'Super Rare') {
+        } else if (vals == 'Epic') {
             $('.rarity-common-slider, .rarity-rare-slider, .rarity-ultra-rare-slider, .rarity-legendary-slider').fadeOut();
             setTimeout(function(){
                 $('.rarity-super-rare-slider').fadeIn();
             }, 300)
-        } else if (vals == 'Ultra Rare') {
+        } else if (vals == 'Legendary') {
             $('.rarity-common-slider, .rarity-rare-slider, .rarity-super-rare-slider, .rarity-legendary-slider').fadeOut();
             setTimeout(function(){
                 $('.rarity-ultra-rare-slider').fadeIn();
             }, 300)
-        } else if (vals == 'Legendary') {
-            $('.rarity-common-slider, .rarity-rare-slider, .rarity-super-rare-slider, .rarity-ultra-rare-slider').fadeOut();
-            setTimeout(function(){
-                $('.rarity-legendary-slider').fadeIn();
-            }, 300)
         }
+				// else if (vals == 'Legendary') {
+        //     $('.rarity-common-slider, .rarity-rare-slider, .rarity-super-rare-slider, .rarity-ultra-rare-slider').fadeOut();
+        //     setTimeout(function(){
+        //         $('.rarity-legendary-slider').fadeIn();
+        //     }, 300)
+        // }
     }
 });
 
