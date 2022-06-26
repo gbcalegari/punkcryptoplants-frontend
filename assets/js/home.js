@@ -31,7 +31,7 @@ var benefits_slider = new Swiper ('.benefits-slider .swiper-container', {
 // rarity range slider
 var rangeSlider = new rSlider({
     target: '#rarity-range-slider',
-    values: ['Common', 'Rare', 'Super Rare', 'Ultra Rare', 'Legendary'],
+    values: ['Common', 'Rare', 'Epic', 'Legendary', 'Supreme'],
     scale: false,
     labels: false,
     tooltip: true,
@@ -57,12 +57,12 @@ var rangeSlider = new rSlider({
                 $('.rarity-ultra-rare-slider').fadeIn();
             }, 300)
         }
-				// else if (vals == 'Legendary') {
-        //     $('.rarity-common-slider, .rarity-rare-slider, .rarity-super-rare-slider, .rarity-ultra-rare-slider').fadeOut();
-        //     setTimeout(function(){
-        //         $('.rarity-legendary-slider').fadeIn();
-        //     }, 300)
-        // }
+				else if (vals == 'Supreme') {
+            $('.rarity-common-slider, .rarity-rare-slider, .rarity-super-rare-slider, .rarity-ultra-rare-slider').fadeOut();
+            setTimeout(function(){
+                $('.rarity-legendary-slider').fadeIn();
+            }, 300)
+        }
     }
 });
 
